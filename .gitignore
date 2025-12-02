@@ -1,0 +1,5 @@
+# Default ignored files
+**/output_folder
+/.idea
+**/.DS_Store
+**.asv
