@@ -183,11 +183,11 @@ function residual = computeResidualRobot(grid, rock, fluid, ...
 
     % NOTE: this uses the same "overwrite / last-write wins" pattern
     % you’ve used before; for a cleaner sum you’d use accumarray.
-    G(2*iz-1) = G(2*iz-1) - Tz .* gamma_avg .* grid.dz;
-    G(2*jz-1) = G(2*jz-1) + Tz .* gamma_avg .* grid.dz;
+    G(2*iz-1) = G(2*iz-1) - Tz .*rho_face_z.* gamma_avg .* grid.dz;
+    G(2*jz-1) = G(2*jz-1) + Tz .*rho_face_z.* gamma_avg .* grid.dz;
 
-    G(2*iz)   = G(2*iz)   - h_face_z .* Tz .* gamma_avg .* grid.dz;
-    G(2*jz)   = G(2*jz)   + h_face_z .* Tz .* gamma_avg .* grid.dz;
+    G(2*iz)   = G(2*iz)   - h_face_z .* Tz .*rho_face_z.* gamma_avg .* grid.dz;
+    G(2*jz)   = G(2*jz)   + h_face_z .* Tz .*rho_face_z.* gamma_avg .* grid.dz;
 
     %------------------------------------------------------------------
     % Accumulation term B (energy only, no compressibility in mass)
@@ -212,3 +212,4 @@ function residual = computeResidualRobot(grid, rock, fluid, ...
     %------------------------------------------------------------------
     residual = R * yv1 + B - G;
 end
+
