@@ -264,7 +264,7 @@ while t < grid.t_end
         end 
 
 
-
+        y = yv1
 
         t = t + grid.dt;
         
@@ -298,5 +298,6 @@ ylabel('y');
 c = colorbar;
 set(c, 'FontSize', 14);
 colormap jet
+
 
 
