@@ -49,7 +49,18 @@ problem_data.gravity            = 9.81;     % Gravitational acceleration [m/s^2]
 problem_data.reference_temp     = 300;      % Reference temperature [K]
 
 % --- BOUNDARY CONDITIONS ---
-problem_data.temp_bottom = 450;             % Bottom temperature (hot) [K]
+%Conductive solution 
+%problem_data.temp_bottom = 350;             % Bottom temperature (hot) [K] (low: Ra -> 6.15e+01)
+
+%Onset of the thermal convection
+%problem_data.temp_bottom = 400;             % Bottom temperature (hot) [K] (onset: Ra -> 4.10e+01 )
+
+%Moderate thermal convection
+problem_data.temp_bottom = 425;             % Bottom temperature (hot) [K] (mod: Ra -> 5.13e+01)
+
+%High thermal convection
+%problem_data.temp_bottom = 450;             % Bottom temperature (hot) [K] (high: Ra -> 6.15e+01)
+
 problem_data.temp_top    = 300;             % Top temperature (cold) [K]
 problem_data.pressure_ref = 1e5;            % Reference pressure [Pa]
 
