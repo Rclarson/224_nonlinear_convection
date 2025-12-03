@@ -50,7 +50,7 @@ problem_data.reference_temp     = 300;      % Reference temperature [K]
 
 % --- BOUNDARY CONDITIONS ---
 %Conductive solution 
-%problem_data.temp_bottom = 350;             % Bottom temperature (hot) [K] (low: Ra -> 6.15e+01)
+%problem_data.temp_bottom = 350;             % Bottom temperature (hot) [K] (low: Ra -> 2.05e+01)
 
 %Onset of the thermal convection
 %problem_data.temp_bottom = 400;             % Bottom temperature (hot) [K] (onset: Ra -> 4.10e+01 )
